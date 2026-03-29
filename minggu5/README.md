@@ -31,3 +31,22 @@
 4. Kesimpulan 
 - pangkatBF(): mengalikan a sebanyak n kali secara berulang dari awal hingga akhir.
 - pangkatDC(): memecah pangkat besar karena jumlah rekursi jauh lebih sedikit.
+
+## Pertanyaan 5.4
+1. 1.	Kenapa dibutuhkan variable mid pada method TotalDC()?
+2.	Untuk apakah statement di bawah ini dilakukan dalam TotalDC()?
+ ```double lsum = totalDC(arr, l, mid);```
+ ```double rsum = totalDC(arr, mid+1, r);```
+3.	Kenapa diperlukan penjumlahan hasil lsum dan rsum seperti di bawah ini?
+ ```return lsum+rsum;```
+4.	Apakah base case dari totalDC()?
+5.	Tarik Kesimpulan tentang cara kerja totalDC()
+### Jawaban: 
+1. variabel mid dibutuhkan untuk membagi array menjadi dua bagian.
+2. base case di totalDC() untuk menghentikan rekursi ketika bagian array yang diproses hanya 1 elemen, langsung dikembalikan nilainya tanpa perlu membagi lagi.
+3. lsum+rsum adalah tahap combine yang dimana keduanya dijumlahkan untuk mendapatkan total keseluruhan array.
+4. ```if (l == r) return arr[1];```
+5. kesimpulan:
+- array dibagi menjadi dua menggunakan variabel mid.
+- setiap bagian dihitung totalnya secara rekursif hingga tersisa 1 elemen.
+- lsum+rsum digabungkan untuk mendapatkan hasil akhir
